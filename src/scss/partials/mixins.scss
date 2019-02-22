@@ -1,0 +1,9 @@
+
+@mixin positions (){
+    @for $i from 0 through 43 {
+        .buttonPosition_#{$i} {
+            top: map-get($positionTop, $i);
+            left: map-get($positionLeft, $i);
+        }
+    }
+}

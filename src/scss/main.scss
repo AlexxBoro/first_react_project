@@ -1,0 +1,120 @@
+@import "./partials/mixins.scss";
+@import "./partials/positionsDots.scss";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: rgb(135,135,135);
+}
+
+.dotStyle {
+    width:12px;
+    height:12px;
+    border-radius:50%;
+    background-color:rgb(167, 51, 51);
+    font-weight: bold;
+    position: absolute;
+    animation-name: clickedButton;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.dotStyle:hover {
+    background-color: black;
+    width:15px;
+    height:15px;
+    border: 2px solid orange;
+    box-shadow: 2px 2px 5px black;
+    cursor: pointer;
+}
+
+@keyframes clickedButton {
+    0%   {background-color: black;}
+    15% {background-color: rgb(54, 35, 35);}
+    30%  {background-color: rgb(83, 32, 32);}
+    45%  {background-color: rgb(138, 34, 34);}
+    60%  {background-color: rgb(182, 23, 23);}
+    75%  {background-color: rgb(138, 34, 34);}
+    90%  {background-color: rgb(83, 32, 32);}
+    100% {background-color: rgb(54, 35, 35);}
+}
+
+.clicked {
+    background-color: orange;
+    width:15px;
+    height:15px;
+    border: 1px solid rgb(167, 51, 51);
+    border: 2px solid orange;
+    box-shadow: 2px 2px 5px black;
+}
+
+@include positions;
+
+img{
+    height: 155%;
+    width: 125%;
+}
+
+.worldMapStyle {
+    height: 90vh;
+    width: 90vw;
+    margin: auto;
+    position: relative;
+    border: 0.1em solid black;
+    display: flex;
+    overflow-y: hidden;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 1px 1px 3px black;
+}
+
+.table {
+    width: 16vw;
+    height: 48vh;
+    position: absolute;
+    border-top: 0.1em solid black;
+    border-right: 0.1em solid black;
+    background-color: #f9f9f9;
+    bottom: 1px;
+    left: 1px;
+    box-shadow: 1px 1px 3px black;
+}
+
+.mapTitle {
+    text-align: center;
+    padding: 0.3em 0.3em;
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: 'Black Ops One', cursive;
+    width: 90vw;
+    margin: 0 auto;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    text-shadow: 1px 1px 3px white;
+}
+
+.mapFooter {
+    text-align: right;
+    width: 90vw;
+    color: white;
+    margin: 0 auto;
+    padding-top: 0.3em;
+}
+
+.tableText {
+    padding: 10px;
+    text-align:center;
+    background-color:rgb(249,249,249);
+    font-family: 'Black Ops One', cursive;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-shadow: 0.5px 0.5px 0.5px rgb(135,135,135);
+}
+
+.tableData {
+    background-color: rgb(249,249,249);
+    padding: 5px;
+    font-weight: bold;
+}
+
