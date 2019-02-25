@@ -10,6 +10,6 @@ tech stack: JavaScript + React, HTML, Sass
 
 here is how it looks like on the screen:
 
-![print screen of the map](https://github.com/AlexxBoro/first_react_project/src/printscreen.png "printscreen")
+![printscreen of the map](src/printscreen.png "printscreen")
 
 
